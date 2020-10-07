@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Find armstrong Number</title>
+    <style>
+         h1{
+             text-align: center;
+             color:brown;
+             padding:20px;
+             background-color: black;
+         }
+
+
+    </style>
+    <script>
+        function arm(){
+           var arm=0,a,b,c,num;
+           num=Number(document.getElementById("no_input").value);
+           temp=num;
+           while(temp>0){
+               a=temp%10; 
+               temp=parseInt(temp/10);
+               arm=arm+a*a*a;
+           }
+              if(arm==num){
+                  alert("Armstrong Number")
+              } else{
+                  alert("No Armstrong Number")
+              }
+        }
+      
+     
+     </script>
+</head>
+<body>
+    <h1>How to write Armstrong Numbers Using JavaScript...</h1>
+     <div class="armstrong">
+       <label>Enter any Number:</label><br>
+        <input id="no_input"><br><br>
+        <button onclick="arm()">Check</button><br>
+
+     </div>
+</body>
+</html>
+
